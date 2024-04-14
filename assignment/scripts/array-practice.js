@@ -10,10 +10,15 @@ console.log('Animals are: ', animalArray);
 // 1. TODO: Make an array `favoriteFoods` with some favorite foods.
 //    Be sure to console.log your array of foods to the console with
 //    a message, similar to the example above.
+
+
 let favoriteFoods = ["steak", "pizza ", "tacos", "shrimp"]
 console.log("my favorite foods are", favoriteFoods);
+
 // Array.length: A property that tells you how many items are in a given array.
 console.log('--- 2. Length of an array ---');
+
+
 //4
 // Example: How many animals are in the array?
 let numberOfAnimals = animalArray.length // 👈 Using the .length property!
@@ -35,15 +40,19 @@ console.log('First animal is', firstAnimal);
 //      of the second item from the `animalArray`.
 //      Be sure to console.log this new variable to make sure your code
 //      worked as expected.
+
 let secondAnimal = animalArray[1];
 console.log(`second animal is`, secondAnimal);
+
 // 3.b. TODO: Create a variable `lastAnimal` and assign it the value of
 //      the "last" item in `animalArray`, using its array index.
 //      You'll need to console.log `animalArray` and `lastAnimal` to make
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
+
 let lastAnimal = animalArray[3];
 console.log(`last animal is `, lastAnimal);
+
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
 
@@ -115,10 +124,25 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
 
+let index = gems.indexOf('Citrine');
+
+gems[index] = 'Tourmaline'
+
+console.log("updated array, replacing Citrine with Tourmaline", gems);
+
+
+
+
+
+
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
 
+gems.sort();
+gems.reverse();
+
+console.log("new assorted gems array", gems);
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
@@ -128,12 +152,20 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 //     🔥 You'll need to research the .join Array method. 🔥
 //     Don't forget to console.log `gemString`...
 
+let gemString = gems.join(" and ");
+
+
+
 
 // 5.d (STRETCH) TODO: Make a new array `colorfulGems` that combines 
 //     the gems array with the colors array.
 //     It should look something like:
 //       ['Tourmaline', 'Topaz', 'Tanzanite', 'Iolite', 'Emerald', 'Diamond', 'yellow', 'green']
 //     Now, console.log the new array.
+
+let colorfulGems = [[gems] + [colors]];
+
+colorfulGems.join(',');
 
 
 
